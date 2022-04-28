@@ -1,5 +1,32 @@
 @import 'base/variables';
 @import 'fonts/font';
 * {
-    font-family: 'Museo Sans Cyrl', serif;
+    font-family: 'Museo Sans Cyrl', sans-serif;
+    color: $black-color;
 }
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+@import 'blocks/promo';
+@import 'blocks/buttons';
+@import 'blocks/titles';
+@import 'blocks/header';
+@import 'blocks/advantage';
+
+@import 'blocks/media';

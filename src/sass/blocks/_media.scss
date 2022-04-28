@@ -1,0 +1,137 @@
+@media (max-width: 1200px) {
+    .advantage {
+        padding: 73px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .promo {
+        padding-bottom: 53px;
+    }
+    .advantage {
+        &__item {
+            width: 220px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__text {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 25px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .header {
+        &__logo {
+            width: 165px;
+        }
+        &__official {
+            span {
+                font-size: 14px;
+                line-height: 1px;
+            }
+        }
+        &__phone {
+            font-size: 16px;
+        }
+    }
+    .promo {
+        padding-bottom: 30px;
+        &__wrapper {
+            margin-top: 110px;
+            align-items: center;
+            text-align: center;
+        }
+        &__header {
+            font-size: 38px;
+            line-height: 38px;
+        }
+        &__subheader {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+    .advantage {
+        padding: 53px 0;
+        &__item {
+            width: 160px;
+            margin-top: 35px;
+        }
+        &__text {
+            min-height: 100px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .title {
+        font-size: 22px;
+    }
+    .button {
+        font-size: 10px;
+        width: 130px;
+        height: 30px;
+        &_main {
+            width: 220px;
+        }
+    }
+    .header {
+        &__logo {
+            width: 50%;
+        }
+        &__official {
+            display: none;
+        }
+        &__phone {
+            font-size: 15px;
+            line-height: 15px;
+        }
+    }
+    .promo {
+        padding-bottom: 15px;
+        &__wrapper {
+            margin-top: 55px;
+        }
+        &__header {
+            font-size: 35px;
+            line-height: 42px;
+        }
+        &__subheader {
+            font-size: 18px;
+        }
+        &__icons {
+            max-width: 320px;
+        }
+        &__icon {
+            font-size: 12px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+    }
+    .advantage {
+        &__items {
+            flex-direction: column;
+        }
+        &__item {
+            width: 100%;
+        }
+        &__text {
+            min-height: auto;
+            max-height: auto;
+        }
+    }
+}
