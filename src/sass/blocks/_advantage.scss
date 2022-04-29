@@ -1,6 +1,7 @@
 .advantage {
-    padding: 73px 91px 83px 97px;
+    padding: 70px 91px 86px 97px;
     background-color: #F6F6F6;
+    min-height: 317px;
     &__items {
         display: flex;
         justify-content: space-between;
@@ -25,5 +26,9 @@
         line-height: 18px;
         min-height: 91px;
         max-height: 150px;
+        span {
+            font-family: 'MuseoModerno', cursive;
+            color: $main-color;
+        }
     }
 }
