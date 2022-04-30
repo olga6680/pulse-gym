@@ -34,6 +34,16 @@
             font-size: 18px;
         }
     }
+    .carousel {
+        &__inner {
+            width: 100%;
+            .slick-slide {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {

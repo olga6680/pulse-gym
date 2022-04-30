@@ -1,0 +1,107 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__tab {
+        width: 222px;
+        height: 52px;
+        left: 211px;
+        top: 0px;
+        background: rgba(0, 0, 0, 0.0001);
+        border: 2px solid #D0D0D0;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        text-transform: uppercase;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        transition: .5s all;
+        &:hover {
+            border: none;
+            box-shadow: 3px 3px 20px $main-color;
+        }
+        div {
+            transform: skewX(25deg);
+            color: #6B6B6B;
+        }
+        &_active {
+            background: $main-color;
+            border: none;
+            cursor: pointer;
+            div {
+                color: #fff;
+            }
+        }
+    }
+    &__content {
+        margin-top: 60px;
+    }
+    .catalog-item {
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #E8E8E8;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px 20px 26px 20px;
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        &__descr {
+            margin-top: 16px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__link {
+            display: block;
+            margin-top: 17px;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration-line: underline;
+            color: $main-color;
+            &:hover {
+                color: $main-color;
+                text-decoration: none;
+            }
+        }
+        hr {
+            margin-top: 19px;
+            margin-bottom: 21px;
+            border-bottom: none;
+            background: #E8E8E8;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            font-weight: 300;
+            font-size: 14px;
+            text-decoration-line: line-through;
+            color: #555555;
+        }
+        &__price {
+            font-weight: 700;
+            font-size: 20px;
+            color: $black-color;
+        }
+    }
+}
