@@ -196,4 +196,16 @@
             height: 45px;
         }
     }
+    .catalog {
+        &__tabs {
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        &__tab {
+            margin-bottom: 10px;
+        }
+        &__content {
+            margin-top: 40px;
+        }
+    }
 }

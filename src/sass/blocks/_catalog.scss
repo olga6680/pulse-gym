@@ -44,14 +44,22 @@
     }
     &__content {
         margin-top: 60px;
+        display: none;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+            justify-content: center;
+        }
     }
-    .catalog-item {
+    &-item {
         width: 300px;
         min-height: 440px;
         border: 2px solid #E8E8E8;
         box-sizing: border-box;
         text-align: center;
         padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin: 0 8px 20px 8px;
         &__img {
             display: block;
             margin: 0 auto;
@@ -69,11 +77,13 @@
             font-size: 14px;
             line-height: 22px;
         }
-        &__link {
+        &__link,
+        &__back {
             display: block;
             margin-top: 17px;
             font-weight: 500;
             font-size: 14px;
+            text-transform: uppercase;
             text-decoration-line: underline;
             color: $main-color;
             &:hover {
@@ -81,11 +91,18 @@
                 text-decoration: none;
             }
         }
+        &__back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            margin-top: 0;
+        }
         hr {
             margin-top: 19px;
             margin-bottom: 21px;
             border-bottom: none;
-            background: #E8E8E8;
+            background: #c7c7c7;
         }
         &__footer {
             display: flex;
@@ -102,6 +119,53 @@
             font-weight: 700;
             font-size: 20px;
             color: $black-color;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0;
+            transform: translateX(-100%);
+            transition: .5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: .5s all;
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style-type: none;
+            text-align: left;
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0;
+            }
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #555555;
+                margin-bottom: 20px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 7px;
+                }
+            }
         }
     }
 }
