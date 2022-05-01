@@ -233,4 +233,14 @@
             text-align: left;
         }
     }
+    .footer {
+        &__info {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &__addr {
+            font-size: 16px;
+        }
+    }
 }

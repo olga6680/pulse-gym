@@ -8,7 +8,11 @@
         display: flex;
         justify-content: space-between;
         align-items: start;
-        -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         flex-wrap: nowrap;
         &:not(:last-child) {
             margin-bottom: 60px;
@@ -41,4 +45,6 @@
         font-size: 16px;
         line-height: 24px;
     }
+
+
 }
