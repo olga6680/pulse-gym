@@ -32,6 +32,56 @@ $(document).ready(function() {
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    //MODAL 
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
+
+    function valideForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Будь ласка, вкажіть своє ім'я",
+                    minlength: jQuery.validator.format("Ім'я повинно бути не меньш за {0} символи!")
+                },
+                phone: "Будь ласка, вкажіть свій телефон",
+                email: {
+                    required: "Нам потрібна ваша електронна адреса, щоб зв’язатися з вами",
+                    email: "Ваша електронна адреса має бути у форматі name@domain.com"
+                }
+            }
+        });
+    };
+
+    valideForms('#consultation-form');
+    valideForms('#order .feed-form');
+    valideForms('#consultation .feed-form');
+
+    $('input[name=phone]').mask("+3 (999) 999-9999");
 });
 
 // const slider = tns({

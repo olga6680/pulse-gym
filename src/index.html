@@ -26,8 +26,8 @@
                     <span>Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__contacts">
-                    <a class="header__phone" href="tel:+38099228974">+3 (809) 922-89-74</a>
-                    <button class="button">замовити дзвінок</button>
+                    <a class="header__phone" href="tel:0800332816">0800 332 816</a>
+                    <button data-modal="consultation" class="button">замовити дзвінок</button>
                 </div>
             </header>
             <div class="promo__wrapper">
@@ -38,7 +38,7 @@
                     <div class="promo__icon"><img src="icons/main/hand-cart.png" alt="hand cart">Безкоштовна доставка</div>
                     <div class="promo__icon"><img src="icons/main/messages.png" alt="messages">Відповімо на всі питання</div>
                 </div>
-                <button class="button button_main">замовити консультацію</button>
+                <button data-modal="consultation" class="button button_main">замовити консультацію</button>
                 <div class="promo__link">
                     або
                     <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -81,10 +81,10 @@
         <div class="container">
             <h2 class="title title_left">Отримайте безкоштовну консультацію<br>щодо підбору пульсометра</h2>
             <div class="consultation__descr">Просто заповніть форму заявки<br> і ми передзвонимо вам протягом 10 хвилин</div>
-            <form class="feed-form" action="#">
-                <input name="name" required placeholder="Ваше ім'я" type="text">
-                <input name="phone" required placeholder="Ваш телефон " type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+            <form id="consultation-form" class="feed-form feed-form_white" action="#">
+                <input name="name" placeholder="Ваше ім'я" type="text">
+                <input name="phone" placeholder="Ваш телефон ">
+                <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">замовити КОНСУЛЬТАЦІЮ</button>
             </form>
@@ -416,8 +416,44 @@
         </div>
     </footer>
 
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заповніть форму заявки</div>
+            <div class="modal__descr">і ми передзвонимо вам протягом 10 хвилин</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" placeholder="Ваше ім'я" type="text">
+                <input name="phone" placeholder="Ваш телефон ">
+                <input name="email" placeholder="Ваш E-mail" type="email">
+
+                <button class="button button_submit">замовити КОНСУЛЬТАЦІЮ</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" placeholder="Ваше ім'я" type="text">
+                <input name="phone" placeholder="Ваш телефон ">
+                <input name="email" placeholder="Ваш E-mail" type="email">
+
+                <button class="button button_submit">Купити</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Дякуємо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер зв'яжеться з вами найближчим часом!</div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
     <script src="js/script.js"></script>

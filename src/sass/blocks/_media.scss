@@ -243,4 +243,13 @@
             font-size: 16px;
         }
     }
+    .modal {
+        width: 290px;
+        padding: 20px;
+        padding-top: 40px;
+        &__close {
+            top: 7px;
+            right: 7px;
+        }
+    }
 }
